@@ -10492,6 +10492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758225210}
   - component: {fileID: 758225209}
+  - component: {fileID: 758225211}
   m_Layer: 0
   m_Name: sky_1
   m_TagString: Untagged
@@ -10564,6 +10565,18 @@ Transform:
   m_Father: {fileID: 947701507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758225211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758225208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3df96996d9a89469a709d3e7c2de28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &793613925
 GameObject:
   m_ObjectHideFlags: 0
@@ -15473,6 +15486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800438315}
   - component: {fileID: 800438314}
+  - component: {fileID: 800438316}
   m_Layer: 0
   m_Name: sky_2
   m_TagString: Untagged
@@ -15545,6 +15559,18 @@ Transform:
   m_Father: {fileID: 947701507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &800438316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800438313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3df96996d9a89469a709d3e7c2de28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &848703242
 GameObject:
   m_ObjectHideFlags: 0
