@@ -31,12 +31,13 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GetComponent<Animator>().SetTrigger("Attack");
+            AudioManager.Instance.PlayBalazo();
         }
         //make jump animation
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GetComponent<Animator>().SetTrigger("Jump");
-             GetComponent<Animator>().SetBool("IsOnGround", false);
+            GetComponent<Animator>().SetBool("IsOnGround", false);
         }
 
 
