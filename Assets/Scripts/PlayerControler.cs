@@ -7,16 +7,11 @@ public class PlayerControler : MonoBehaviour
     public bool isOnGround;
     //get the rigidbody component
     private Rigidbody2D playerRB;
-    private Animator playerAnim;
-    public int pointsPlayer = 0; //score
-    public int healthPlayer = 100; //score
-    public bool gameOver=false;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-        playerAnim = GetComponent<Animator>();
         
     }
 
@@ -25,27 +20,25 @@ public class PlayerControler : MonoBehaviour
     {
         //get jump animation
        
-        
-    	if (Input.GetKeyDown(KeyCode.Space))	//make jump animation
-        {
-            playerAnim.SetTrigger("Jump");
+        //make te player jump while on the ground
 
-            playerAnim.SetBool("IsOnGround", false);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)	//make te player jump while on the ground
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
         {
-        	//AudioManager.Instance.PlayJump();
-            playerRB.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
             isOnGround = false;
         }
         //make the player attack
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            playerAnim.SetTrigger("Attack");
+            GetComponent<Animator>().SetTrigger("Attack");
             AudioManager.Instance.PlayBalazo();
         }
-        
-        
+        //make jump animation
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Animator>().SetTrigger("Jump");
+            GetComponent<Animator>().SetBool("IsOnGround", false);
+        }
 
 
        
@@ -55,7 +48,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            playerAnim.SetBool("IsOnGround", true);
+            GetComponent<Animator>().SetBool("IsOnGround", true);
             isOnGround = true;
         }
     }

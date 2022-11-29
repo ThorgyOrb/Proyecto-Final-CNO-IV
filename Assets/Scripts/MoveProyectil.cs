@@ -17,7 +17,7 @@ public class MoveProyectil : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * 10);
 
         //destroy the prefab when it is out of the screen
-        if (transform.position.x > 12)
+        if (transform.position.z > 10)
         {
             Destroy(this.gameObject);
         }
