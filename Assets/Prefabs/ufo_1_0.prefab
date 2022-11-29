@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7302507605365372545}
   m_Layer: 0
   m_Name: ufo_1_0
-  m_TagString: Untagged
+  m_TagString: UFO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   minSpeed: 4
   maxSpeed: 12
   health: 20
-  damage: 10
+  damage: 20
   lifeTime: 5
   rarity: 1
 --- !u!61 &-1195274513930223366
